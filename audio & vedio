@@ -1,0 +1,68 @@
+//插入动画
+
+<!--插入flash动画：<embed src = "" width = "" height = ""-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>President Xi arrives MCSAR</title>
+</head>
+<body>
+	<embed src = "C:\Users\Jianan Yuan\Desktop\timg.swf" width = "1000" height = "204">
+</body>
+</html>
+
+//插入音频
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AIA</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<audio controls="controls" autoplay="autoplay">
+  		<source src="C:\Users\Jianan Yuan\Music\金贵晟 - 虹之间.mp3" type="audio/ogg" />
+  		<source src="C:\Users\Jianan Yuan\Music\金贵晟 - 虹之间.mp3" type="audio/mpeg" />
+	Your browser does not support the audio element.
+	</audio>
+</body>
+</html>
+
+
+//插入视频
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Travel to HKSAR</title>
+</head>
+<body> <center>
+	<h1> Travel back to China Mainland by MTR <br><br><br><br>
+	<video width="320" height="240" controls="controls">
+  		<source src="D:\从C盘搬过来的视频\HK Travel\VID_20190429_203444.ogg" type="video/ogg">
+  		<source src="D:\从C盘搬过来的视频\HK Travel\VID_20190429_203444.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+</center></body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Travel to HKSAR</title>
+</head>
+<body background = "C:\Users\Jianan Yuan\Pictures\desk_background\2768.jpg_wh1200.jpg"
+	  style=" background-repeat:no-repeat; background-size:100% 100%; background-attachment:fixed;"> 
+	<center><h1> Travel back to China Mainland by MTR </h1><br><br><br><br></center>
+	<video width="320" height="240" controls="controls">
+  		<source src="D:\从C盘搬过来的视频\HK Travel\VID_20190429_203444.mp4" type="video/ogg">
+  		<source src="D:\从C盘搬过来的视频\HK Travel\VID_20190429_203444.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+	<video width="320" height="240" controls="controls">
+  		<source src="D:\从C盘搬过来的视频\HK Travel\VID_20190429_200756.mp4" type="video/ogg">
+  		<source src="D:\从C盘搬过来的视频\HK Travel\VID_20190429_200756.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+</body>
+</html>
