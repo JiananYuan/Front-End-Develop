@@ -26,3 +26,61 @@
 
 设置背景图片 <body background = url of image...>
 
+note：填充图片
+
+body background = "C:\\Users\\Jianan Yuan\\Desktop\\bgimage.jfif"
+	  style=" background-repeat:no-repeat; background-size:100% 100%; background-attachment:fixed;">
+
+设置文字颜色 <body text = "red">
+
+3. 设置字体
+
+<font face = "宋体">...</font>
+
+<font size = "1">...</font>
+
+<font color = "#336699"></font>
+
+<u>...</u> 为文字添加下划线
+
+<s>...</s> 为文字添加删除线
+
+<sup>...</sup> 文字上标
+
+<sub>...</sub> 文字上标
+
+4. 文字标注
+
+<ruby>
+  被说明的文字
+  <rt>
+    文字的标注
+  </rt>
+</ruby>
+
+5. 插入图像：
+
+<img src = "..." height = "" width = "" border = "" alt = "" align = "">  // align是对齐方式
+
+6. 项目列表
+
+<ur> 标签
+
+修改列表符号 <ul type = ""> // circle(空心小圆点), disc(实心小圆点), square(实心小方块)
+
+7. 编号列表
+
+<ol>标签
+
+修改编号列表起始值 <ol start = "3">
+
+8. 定义列表<dl>标签
+
+<dl>
+		<dt>L1</dt><dd>说明1</dd>
+		<dt>L2</dt><dd>说明2</dd>
+</dl>
+
+9. 
+
+
