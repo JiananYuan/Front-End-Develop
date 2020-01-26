@@ -1,0 +1,24 @@
+关于网页头部
+
+1. <head>标签
+
+<meta>：设置网页关键字 <meta name = "keywords" content = "输入具体关键字">
+
+设置网页说明，同上
+
+设置网页作者信息 
+
+设置网页编辑软件
+
+设置网页定时跳转 <meta http-equiv = "refresh" content = "5; URL = www.baidu.com">
+
+限制搜索方式
+
+设置网页文字及语言
+
+...
+
+2. <body>标签
+
+设置网页边距 <body topmargin = "50" left... right... bottom... >
+
