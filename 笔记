@@ -22,3 +22,7 @@
 
 设置网页边距 <body topmargin = "50" left... right... bottom... >
 
+设置背景颜色 <body bgcolor = "#FF6633">
+
+设置背景图片 <body background = url of image...>
+
