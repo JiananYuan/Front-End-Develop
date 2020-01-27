@@ -81,6 +81,51 @@ body background = "C:\\Users\\Jianan Yuan\\Desktop\\bgimage.jfif"
 		<dt>L2</dt><dd>说明2</dd>
 </dl>
 
-9. 
+9. 创建超链接
+
+<a href = "">...</a>
+
+10. 创建锚点连接
+
+锚点的名称只能包含小写ASCII码和数字，且不能以数字开头，网页上锚点名称不能重复。
+
+例如：
+
+<body>
+	<p><a href = "#intro">公司简介</a> | <a href = "#about">关于我们</a> | <a href = "#proj">服务项目</a> | <a href = "#contract">联系我们</a></p>
+	<p>
+		<a name = "intro"></a>
+		公司简介内容
+	</p>
+	<p>
+		<a name = "about"></a>
+		关于我们内容
+	</p>
+	<p>
+		<a name = "proj"></a>
+		服务项目内容
+	</p>
+	<p>
+		<a name = "contract"></a>
+		联系我们内容
+	</p>
+	
+</body>
+
+如果创建到其他页面的锚点连接，在#前面加上连接页面名称即可
+
+11. 特殊超链接
+
+空连接 <a href = "#">...</a>
+
+文件下载链接 exe、rar
+
+脚本链接 <a href = "JavaScript:window.close();">close it</a>
+
+Email 连接 <a href = "mailto:...>...</a>
+
+如若还需要添加主题：<a href = "mailto:...?subject = "...">...</a>
+
+
 
 
