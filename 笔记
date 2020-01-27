@@ -126,6 +126,23 @@ Email 连接 <a href = "mailto:...>...</a>
 
 如若还需要添加主题：<a href = "mailto:...?subject = "...">...</a>
 
+12. 插入多媒体
 
+插入Flash动画
+<embed src = "" width = "" height = "" />
 
+插入背景音乐
+<bgsound src = "C:\Users\Jianan Yuan\Music\Animal Pop - Last Stop.mp3"></bgsound>
+
+若要控制循环次数，<bgsound src... loop = ""></bgsound>
+
+嵌入音频：音频播放控制条
+
+<embed src = "C:\Users\Jianan Yuan\Music\Animal Pop - Last Stop.mp3" width = "400" height = "100" autostart = "true" loop = "-1">
+
+插入视频：
+
+<embed = "格式同上
+
+若要隐藏播放控件 增加元素 hidden
 
