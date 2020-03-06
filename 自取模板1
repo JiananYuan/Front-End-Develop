@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>change Char. to Uppercase</title>
+	<script type="text/javascript">
+		function change() {
+			var s = document.getElementById("text").value
+			document.getElementById("text").value = s.toUpperCase()
+		}
+		function prompt() {
+			alert("powered by me")
+		}
+	</script>
+</head>
+<body onload="prompt()">
+	input string:
+	<input type="text" id="text" onblur="change()">
+</body>
+</html>
