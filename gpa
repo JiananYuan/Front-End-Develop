@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GPA Inquiry of SZU</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function check() {
+			if(document.info.name.value =='') {
+				alert("您未输入姓名")
+				return false;
+			} 
+			if(document.info.num.value.length != 10) {
+				alert("您输入的学号不是10位")
+				return false;
+			}
+			return true;
+		}
+		function calculate() {
+			if(!check()) {
+				return;
+			}
+			var xf = document.getElementsByName("xuefen")
+			var sum = 0, u = 0
+			for (var i = 0; i < xf.length; i++, u++) {
+				if( xf[i].value == '' ) break
+				sum += parseFloat( xf[i].value )
+			}
+			
+			var cj = document.getElementsByName("grade")
+			var score = 0
+			for (var i = 0; i < u; i++) {
+				var tmp = cj[i].value
+				switch(tmp) {
+					case 'A+': score += 4.5 * parseFloat(xf[i].value); break;
+					case 'A':  score += 4.0 * parseFloat(xf[i].value); break;
+					case 'B+': score += 3.5 * parseFloat(xf[i].value); break;
+					case 'B':  score += 3.0 * parseFloat(xf[i].value); break;
+					case 'C':  score += 2.0 * parseFloat(xf[i].value); break;
+					case 'D':  score += 1.0 * parseFloat(xf[i].value); break;	
+				}
+			}
+			var GPA = score / sum
+			alert(document.info.name.value + "同学，您本学期的绩点是：" + GPA)
+		}
+
+	</script>
+</head>
+<body>
+	<p><center><font size="6" color="blue" ><b>Online GPA Inquiry of Shenzhen University</b></font></center></p>
+	<p><center>__________________________________________________________________________________________________________</center></p><br>
+	<form name="info">
+		<p><center>
+		<b>姓名：</b><input type="text" name="name"> &nbsp &nbsp
+		<b>学号：</b><input type="text" name="num"> &nbsp &nbsp
+		<b>性别：</b><input type="radio" name="sex"> 男 &nbsp
+			 <input type="radio" name="sex"> 女
+		</center></p><br>
+		<p><center>
+		<b>地区：</b><input type="radio" name="area"> 中国大陆 
+				<img src="https://www.png8.com/imgs/2020/03/2bfa16294f085305.png" height="42" width="68"> &nbsp
+			  <input type="radio" name="area"> 中国香港
+			    <img src="https://www.png8.com/imgs/2020/03/0e9a4cfce392e660.png" height="40" width="60"> &nbsp
+			    <input type="radio" name="area"> 中国澳门
+			  <img src="https://www.png8.com/imgs/2020/03/f457ba3170795baf.png" height="40" width="60"> &nbsp
+			  <input type="radio" name="area"> 其他地区
+		</center></p><br>
+	</form>
+
+	<p><center>----------------------------------------<font color="red"><b>请输入您本学期修课及等级</b></font>-----------------------------------------</center></p>
+
+	<form name="gpa"><center>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp课程名 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 学分 &nbsp&nbsp&nbsp&nbsp&nbsp 等级
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<input type="text" name="subject"> &nbsp&nbsp&nbsp
+			<input type="text" name="xuefen" size="1"> &nbsp&nbsp&nbsp
+			<select name="grade">
+				<option>A+</option> <option>A</option> <option>B+</option> <option>B</option>
+				<option>C</option> <option>D</option> <option>F</option>
+			</select>
+		</div><br>
+
+		<input type="button" value="查询" onclick="calculate()">
+		<input type="reset">
+	</center></form>
+
+	<center><font size="2" color="#888">Powered By <a href="./main.html">jiananyuan.github.io</a> @2020 All Rights Reserved</font></center>
+
+</body>
+</html>
