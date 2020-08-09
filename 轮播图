@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html {
+            height: 100%;
+            width: 1396px;
+        }
+        body {
+            height: 100%;
+            width: 1396px;
+        }
+        .page { 
+            height: 100%;
+            width: 1396px;
+            text-align: center;
+            overflow: hidden;
+            font-size: 0;
+        }
+        .box {
+            text-align: center;
+            overflow: hidden;
+            height: 100%;
+            width: 6980px;
+            transition: transform 0.5s; /* 切换的时间为0.5s */
+        }
+        .box img {
+            width: 1396px;
+            display: inline; /* 一行排列，注意总宽度大于图片宽度之和才可以实现此效果 */
+        }
+        #index {
+            position: absolute;
+            left: 47%;
+            top: 50%;
+        }
+        #index img {
+            cursor: pointer;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="box" id="idx">
+            <img src="https://www.png8.com/imgs/2020/08/3b0940dd951506c6.jpg" alt="这是一张图片">
+            <img src="https://www.png8.com/imgs/2020/08/2d9d49869f173040.jpg" alt="这是一张图片">
+            <img src="https://www.png8.com/imgs/2020/08/7dac84804fe4ff8a.jpg" alt="这是一张图片">
+            <img src="https://www.png8.com/imgs/2020/08/6a7fc4d886c6a3fe.jpg" alt="这是一张图片">
+            <img src="https://www.png8.com/imgs/2020/08/7357442a092f53b8.jpg" alt="这是一张图片">
+        </div>
+        <div id="index">
+            <img src="https://www.png8.com/imgs/2020/08/15d93b8c2d13fc7c.png" alt="这是一个小圆点" id="p0">
+            <img src="https://www.png8.com/imgs/2020/08/ee47c7ec93e9e32f.png" alt="这是一个小圆点" id="p1">
+            <img src="https://www.png8.com/imgs/2020/08/ee47c7ec93e9e32f.png" alt="这是一个小圆点" id="p2">
+            <img src="https://www.png8.com/imgs/2020/08/ee47c7ec93e9e32f.png" alt="这是一个小圆点" id="p3">
+            <img src="https://www.png8.com/imgs/2020/08/ee47c7ec93e9e32f.png" alt="这是一个小圆点" id="p4">  
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var red = 'https://www.png8.com/imgs/2020/08/15d93b8c2d13fc7c.png';
+        var grey = 'https://www.png8.com/imgs/2020/08/ee47c7ec93e9e32f.png';
+        var idx = document.getElementById('idx'); // 图片框架div
+        var cnt = 0;
+        
+        function play() {
+            document.getElementById('p'+cnt).src = grey;
+            cnt = (cnt+1)%5;
+            document.getElementById('p'+cnt).src = red;
+            idx.style.transform = 'translate(-' +  cnt*1396 + 'px)' // 渐变式切换效果
+        }
+
+        function doClick(id) {
+            clearInterval(timer);
+            document.getElementById('p'+cnt).src = grey;
+            cnt = id;
+            document.getElementById('p'+cnt).src = red;
+            idx.style.transform = 'translate(-' +  cnt*1396 + 'px)'; 
+            timer = setInterval(play,5000);
+        }
+
+        var timer = setInterval(play, 5000);
+
+        document.getElementById('p0').onclick = function() {
+            doClick(0);
+        };
+        document.getElementById('p1').onclick = function() {
+            doClick(1);
+        };
+        document.getElementById('p2').onclick = function() {
+            doClick(2);
+        };
+        document.getElementById('p3').onclick = function() {
+            doClick(3);
+        };
+        document.getElementById('p4').onclick = function() {
+            doClick(4);
+        };
+
+    </script>
+</body>
+</html> 
