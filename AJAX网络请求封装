@@ -1,0 +1,45 @@
+function ajax(opt) {
+    var defaultParam = {
+        type: 'get',
+        url: '#',
+        data: {},
+        async: true, // 异步
+        success: function() {}
+    }
+
+    for(var key in opt) {
+        defaultParam[key] = opt[key];
+    }
+
+    // new XHR对象，兼容性
+    var xhr = null;
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest();
+    } else {
+        xhr = new ActiveXObject('Microsoft.XMLHTTP');
+    }
+    // open
+    var paramStr = '';
+    for (var k in defaultParam.data) {
+        paramStr += k + '=' + defaultParam.data[k] + '&';
+    }
+    paramStr = paramStr.substr(0,paramStr.length-1);
+
+    if (defaultParam.type == 'get') {
+        xhr.open('get',defaultParam.url + '?' + paramStr, defaultParam.async);
+        xhr.send();
+    } else {
+        xhr.open('post',defaultParam.url,defaultParam.async);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send(paramStr);
+    }
+    
+    // 监听
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                defaultParam.success(xhr.responseText);
+            }
+        }
+    }
+}
